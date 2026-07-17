@@ -1,0 +1,167 @@
+@import 'tailwindcss';
+
+
+
+/* theme>base>components>utilities　カスケードレイヤー */
+@layer theme{
+  html{
+  height: 100%;
+}
+
+  .basicbtn{
+    display: block;
+    padding: 5px 10px;
+    border: #1a1a1a;
+    background-color: #f9f9f9;
+    color: #1a1a1a;
+    font-size: 24px;
+  }
+
+}
+
+@layer base{
+}
+
+@layer components{}
+
+@layer utilities{}
+
+:root {
+  padding: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* fullcalender用 */
+  --fc-border-color: oklch(70.4% 0.14 182.503);
+  --fc-daygrid-event-dot-width: 10px;
+  --fc-button-text-color: #fff;
+  --fc-button-bg-color: oklch(43.7% 0.078 188.216);
+  --fc-button-border-color: none;
+  --fc-button-hover-bg-color: oklch(70.4% 0.14 182.503);
+  --fc-button-hover-border-color: none;
+  --fc-event-bg-color: oklch(43.7% 0.078 188.216/50%);
+  --fc-event-border-color: oklch(43.7% 0.078 188.216);
+  
+
+}
+
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-weight: 500;
+  cursor: pointer;
+  /* transition: 0.25s; */
+}
+button.arrow{
+  padding:  0.2em 0.4em;
+  font-weight: 900;
+}
+button:hover {
+  /* border-color: #646cff; */
+  opacity: 0.9;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input{
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: #1a1a1a solid 2px;
+}
+
+label{
+  font-weight: bold;
+}
+
+form{}
+form label{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+form input{
+  margin-bottom: 10px;
+}
+h3{
+  font-weight: bold;
+}
+
+
+/* alert表示用 */
+p.alert{
+  font-size:1.1rem;
+  padding: 2px;
+  background-color: pink;
+  color: red;
+}
+
+/* fullcalender用 */
+.fc{
+  z-index: 0 !important;
+}
+.fc-daygrid-day{
+  z-index: 0 !important;
+}
+
+/* modal用 */
+.ReactMmodal__Body--open{
+  border-radius: 100px;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    /* background-color: #f9f9f9; */
+  }
+  select{
+    border:2px solid #333;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
+}
+
+/* 試しに@mediaで操作 */
+@media (width < 768px){
+  .fc-theme-standard td, .fc-theme-standard th{
+    height: 50px;
+
+  }
+  .fc .fc-bg-event .fc-event-title{
+    font-size: 0.75rem;
+    width: 100%;
+
+  }
+
+}
