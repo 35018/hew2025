@@ -1,0 +1,10 @@
+FROM postgres:17-alpine3.22
+
+#Time ZoneAC
+
+ENV TZ Asia/Tokyo
+
+# Lang
+ENV LANG ja_JP.UTF-8
+ENV LANGUAGE ja_JP:ja
+ENV LC_ALL ja_JP.UTF-8
